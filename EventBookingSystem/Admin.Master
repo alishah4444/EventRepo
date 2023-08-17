@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="EventBookingSystem.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Panel</title>
+    <link rel="icon" href="Images/logo.png">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="Dashboard.aspx">
+            <img src="Images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="website logo">
+            Event Booking System 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminProducts.aspx">All Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AddProduct.aspx">Add Events</a>
+                </li>
+                <li class="nav-item">
+                    <asp:LinkButton class="nav-link" ID="lbLogout" runat="server" Text="Logout" OnClick="lbLogout_Click" />
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div class="container" style="margin-top:20px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+<script src="Scripts/bootstrap.min.js"></script>
+</html>

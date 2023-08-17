@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="EventBookingSystem.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Event Booking System</title>
+    <link rel="icon" href="Images/logo.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link href="Content/css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="site-header">
+            <div class="header-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-10 col-lg-2 order-lg-1">
+                            <div class="site-branding">
+                                <div class="site-title">
+                                    <a href="HomePage.aspx">
+                                        <img src="images/logo.png" style="width: 100px; height: 100px" alt="logo"></a>
+                                </div>
+                                <!-- .site-title -->
+                            </div>
+                            <!-- .site-branding -->
+                        </div>
+                        <!-- .col -->
+
+                        <div class="col-2 col-lg-7 order-3 order-lg-2">
+                            <nav class="site-navigation">
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <!-- .hamburger-menu -->
+
+                                <ul>
+                                    <li><a href="HomePage.aspx">Home</a></li>
+                                    <li><a href="Events.aspx">Events</a></li>
+                                    <li>
+                                        <asp:Label Style="color: orangered; font-size: 25px" ID="lblUserName" runat="server" /></li>
+                                    <li>
+                                        <asp:LinkButton ID="lbLogout" runat="server" Text="Logout" OnClick="lbLogout_Click" /></li>
+                                </ul>
+                            </nav>
+                            <!-- .site-navigation -->
+                        </div>
+
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container-fluid -->
+            </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+    </form>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <figure class="footer-logo">
+                        <a href="HomePage.aspx">
+                            <img src="images/logo.png" style="height: 200px; width: 200px" alt="logo"></a>
+                    </figure>
+
+                    <nav class="footer-navigation">
+                        <ul class="flex flex-wrap justify-content-center align-items-center">
+                            <li><a href="HomePage.aspx">Home</a></li>
+                            <li><a href="Event.aspx">Events</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+<script type='text/javascript' src='Scripts/js/jquery.js'></script>
+<script type='text/javascript' src='Scripts/js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='Scripts/js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='Scripts/js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='Scripts/js/circle-progress.min.js'></script>
+<script type='text/javascript' src='Scripts/js/jquery.countTo.min.js'></script>
+</html>
